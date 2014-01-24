@@ -1,0 +1,419 @@
+# Copyright (C) 2014 Konnichiwa!
+# This file is distributed under the same license as the Konnichiwa! package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Konnichiwa! 0.6.4\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/konnichiwa\n"
+"POT-Creation-Date: 2014-01-21 16:38:39+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: controllers/contents.php:67
+msgid "Content access"
+msgstr ""
+
+#: controllers/contents.php:112
+msgid "This content is available only for registered users."
+msgstr ""
+
+#: controllers/contents.php:134
+msgid "This content is available only for users with the following subscription plans: <b>%s</b>"
+msgstr ""
+
+#: controllers/shortcodes.php:19
+msgid "Currently subscribed!"
+msgstr ""
+
+#: controllers/shortcodes.php:24
+msgid "Subscription expired!"
+msgstr ""
+
+#: controllers/subs.php:57
+msgid "User not found."
+msgstr ""
+
+#: models/basic.php:86
+msgid "Konnichiwa!"
+msgstr ""
+
+#: models/basic.php:86
+msgid "Konnichiwa"
+msgstr ""
+
+#: models/basic.php:89
+msgid "Subscription Plans"
+msgstr ""
+
+#: models/basic.php:91
+msgid "Content Access"
+msgstr ""
+
+#: models/basic.php:93
+msgid "Subscriptions"
+msgstr ""
+
+#: models/basic.php:95
+msgid "Help"
+msgstr ""
+
+#: models/plan.php:10 models/plan.php:21
+msgid "DB Error"
+msgstr ""
+
+#: views/add-subscription.html.php:2
+msgid "Add Subscription"
+msgstr ""
+
+#: views/add-subscription.html.php:10
+msgid "User login or email address:"
+msgstr ""
+
+#: views/add-subscription.html.php:11 views/edit-subscription.html.php:13
+msgid "Subscription plan:"
+msgstr ""
+
+#: views/add-subscription.html.php:16 views/edit-subscription.html.php:19
+msgid "Amount paid:"
+msgstr ""
+
+#: views/add-subscription.html.php:18 views/edit-subscription.html.php:26
+msgid "Save Subscription"
+msgstr ""
+
+#: views/add-subscription.html.php:19 views/edit-subscription.html.php:28
+msgid "Cancel"
+msgstr ""
+
+#: views/add-subscription.html.php:28
+msgid "Please enter login or email address!"
+msgstr ""
+
+#: views/content-restrictions-partial.html.php:1
+msgid "Access is given to all registered users"
+msgstr ""
+
+#: views/content-restrictions-partial.html.php:2
+msgid "Access is given to user with the following subscription plan(s):"
+msgstr ""
+
+#: views/contents.html.php:2
+msgid "Manage Content Restrictions"
+msgstr ""
+
+#: views/contents.html.php:4
+msgid "On this page you can restrict the access to various types of content and elaborate futher by category. You can apply the same restrictions to individual posts and pages from the respective add/edit post/page screens. By default all content is accessible to everyone."
+msgstr ""
+
+#: views/contents.html.php:8
+msgid "Restrict access to:"
+msgstr ""
+
+#: views/contents.html.php:14
+msgid "Restrict in global"
+msgstr ""
+
+#: views/contents.html.php:15
+msgid "Restrict by category"
+msgstr ""
+
+#: views/contents.html.php:25
+msgid "Category: %s"
+msgstr ""
+
+#: views/contents.html.php:35
+msgid "Note: access settings configured on individual content pages will not be overwritten and always have priority over the global settings configured on this page."
+msgstr ""
+
+#: views/contents.html.php:37
+msgid "Save Access Settings"
+msgstr ""
+
+#: views/edit-subscription.html.php:2
+msgid "Edit Subscription"
+msgstr ""
+
+#: views/edit-subscription.html.php:10
+msgid "User:"
+msgstr ""
+
+#: views/edit-subscription.html.php:11
+msgid "Date subscribed:"
+msgstr ""
+
+#: views/edit-subscription.html.php:12
+msgid "Expiration date:"
+msgstr ""
+
+#: views/edit-subscription.html.php:21
+msgid "Status:"
+msgstr ""
+
+#: views/edit-subscription.html.php:22 views/subscriptions.html.php:23
+msgid "Active"
+msgstr ""
+
+#: views/edit-subscription.html.php:23
+msgid "Inactive"
+msgstr ""
+
+#: views/edit-subscription.html.php:27 views/plans.html.php:17
+msgid "Delete"
+msgstr ""
+
+#: views/edit-subscription.html.php:37 views/plans.html.php:31
+msgid "Are you sure?"
+msgstr ""
+
+#: views/help.html.php:2
+msgid "Konnichiwa! - Create Powerful Membership Site In Minutes"
+msgstr ""
+
+#: views/help.html.php:4
+msgid "Konnichiwa! is one of the easiest to start with membership plugins. Check our <a href=\"%s\" target=\"_blank\">quick getting started guide</a>."
+msgstr ""
+
+#: views/help.html.php:6
+msgid "For questions or feature requests please use the WordPress forum."
+msgstr ""
+
+#: views/meta-box.html.php:2
+msgid "Inherit the <a href=\"%s\" target=_blank\">global settings</a>."
+msgstr ""
+
+#: views/meta-box.html.php:3
+msgid "Configure individual access"
+msgstr ""
+
+#: views/meta-box.html.php:6
+msgid "Accessible to everyone"
+msgstr ""
+
+#: views/meta-box.html.php:7
+msgid "Accessible to all registered users"
+msgstr ""
+
+#: views/meta-box.html.php:8
+msgid "Accessible only to users with the following subscription plans:"
+msgstr ""
+
+#: views/options.html.php:2
+msgid "Konnichiwa Options"
+msgstr ""
+
+#: views/options.html.php:6
+msgid "Payment Settings"
+msgstr ""
+
+#: views/options.html.php:8
+msgid "Payment currency:"
+msgstr ""
+
+#: views/options.html.php:16
+msgid "Here you can specify payment methods that you will accept to give access to content."
+msgstr ""
+
+#: views/options.html.php:18
+msgid "Accept PayPal"
+msgstr ""
+
+#: views/options.html.php:21
+msgid "Your Paypal ID:"
+msgstr ""
+
+#: views/options.html.php:24
+msgid "Accept Stripe"
+msgstr ""
+
+#: views/options.html.php:27
+msgid "Your Public Key:"
+msgstr ""
+
+#: views/options.html.php:28
+msgid "Your Secret Key:"
+msgstr ""
+
+#: views/options.html.php:31
+msgid "Accept other payment methods"
+msgstr ""
+
+#: views/options.html.php:32
+msgid "This option lets you paste your own button HTML code or other manual instructions, for example bank wire. These payments will have to be processed manually unless you can build your own script to verify them."
+msgstr ""
+
+#: views/options.html.php:35
+msgid "Enter text or HTML code for payment button(s). You can use the following variables: {{plan-id}}, {{user-id}}, {{amount}}."
+msgstr ""
+
+#: views/options.html.php:39
+msgid "Save payment settings"
+msgstr ""
+
+#: views/plan.html.php:2
+msgid "Add/Edit Subscription Plan"
+msgstr ""
+
+#: views/plan.html.php:5 views/plans.html.php:8
+msgid "Plan name"
+msgstr ""
+
+#: views/plan.html.php:6
+msgid "Optional description"
+msgstr ""
+
+#: views/plan.html.php:7 views/plans-table-horizontal.html.php:2
+#: views/plans.html.php:8
+msgid "Price"
+msgstr ""
+
+#: views/plan.html.php:8 views/plans.html.php:8
+msgid "Duration"
+msgstr ""
+
+#: views/plan.html.php:10
+msgid "days"
+msgstr ""
+
+#: views/plan.html.php:11
+msgid "weeks"
+msgstr ""
+
+#: views/plan.html.php:12
+msgid "months"
+msgstr ""
+
+#: views/plan.html.php:14
+msgid "Save This Plan"
+msgstr ""
+
+#: views/plan.html.php:22
+msgid "Please enter name."
+msgstr ""
+
+#: views/plan.html.php:28
+msgid "Please enter positive number for duration."
+msgstr ""
+
+#: views/plans-table-horizontal.html.php:2
+msgid "Subscription Plan"
+msgstr ""
+
+#: views/plans-table-horizontal.html.php:2
+msgid "Valid for"
+msgstr ""
+
+#: views/plans-table-vertical.html.php:5
+msgid "for"
+msgstr ""
+
+#: views/plans.html.php:2
+msgid "Manage Subscription Plans"
+msgstr ""
+
+#: views/plans.html.php:4
+msgid "Click here to create a new plan"
+msgstr ""
+
+#: views/plans.html.php:8
+msgid "Shortcode"
+msgstr ""
+
+#: views/plans.html.php:9
+msgid "Edit / delete"
+msgstr ""
+
+#: views/plans.html.php:16 views/subscriptions.html.php:18
+#: views/subscriptions.html.php:25
+msgid "Edit"
+msgstr ""
+
+#: views/plans.html.php:22
+msgid "The plan shortcode is used to generate a subscribe button. The button will automatically handle the user subscription and redirect them to the payment page accordingly to your payment settings."
+msgstr ""
+
+#: views/plans.html.php:24
+msgid "It is recommended to design your own page that will list the plans with their features etc.<br> However there are basic shortcodes that you can use to automatically generate a table with all the available plans:"
+msgstr ""
+
+#: views/plans.html.php:24
+msgid "- generates list of the plans with their feautures ordered in columns, while"
+msgstr ""
+
+#: views/plans.html.php:24
+msgid "generates a horizontal table with plans. Both codes auto-generate the \"Subscribe\" buttons."
+msgstr ""
+
+#: views/plans.html.php:26
+msgid "(Stay tuned for a lot more flexible options in the upcoming Konnichiwa releases.)"
+msgstr ""
+
+#: views/subscribe-form.html.php:3
+msgid "Subscribe Now!"
+msgstr ""
+
+#: views/subscribe-pay.html.php:2
+msgid "Subscribing in %s"
+msgstr ""
+
+#: views/subscribe-pay.html.php:5
+msgid "You have been successfully subscribed to the selected plan!"
+msgstr ""
+
+#: views/subscribe-pay.html.php:15
+msgid "Subscribe for %s"
+msgstr ""
+
+#: views/subscribe-pay.html.php:36
+msgid "Subscription plan %s"
+msgstr ""
+
+#: views/subscriptions.html.php:2
+msgid "Manage Subscriptions"
+msgstr ""
+
+#: views/subscriptions.html.php:4
+msgid "Select subscription plan:"
+msgstr ""
+
+#: views/subscriptions.html.php:5
+msgid "- please select -"
+msgstr ""
+
+#: views/subscriptions.html.php:12
+msgid "Click here to manually add subscription."
+msgstr ""
+
+#: views/subscriptions.html.php:16
+msgid "User name"
+msgstr ""
+
+#: views/subscriptions.html.php:16
+msgid "Date subscribed"
+msgstr ""
+
+#: views/subscriptions.html.php:17
+msgid "Expiration date"
+msgstr ""
+
+#: views/subscriptions.html.php:17
+msgid "Status"
+msgstr ""
+
+#: views/subscriptions.html.php:17
+msgid "Amount paid"
+msgstr ""
+
+#: views/subscriptions.html.php:23
+msgid "Pending"
+msgstr ""
+
+#: views/subscriptions.html.php:28
+msgid "There are no subscriptions in this plan yet."
+msgstr ""
+
+#: views/subscriptions.html.php:31
+msgid "Please select plan to manage subscriptions in it."
+msgstr ""
