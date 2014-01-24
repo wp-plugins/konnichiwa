@@ -1,0 +1,35 @@
+<div class="wrap">
+	<h1><?php _e('Manage Subscription Plans', 'konnichiwa')?></h1>
+	
+	<p><a href="admin.php?page=konnichiwa_plans&action=add"><?php _e('Click here to create a new plan', 'konnichiwa')?></a></p>
+	
+	<?php if(sizeof($plans)):?>
+		<table class="widefat">
+			<tr><th><?php _e('Plan name', 'konnichiwa')?></th><th><?php _e('Shortcode', 'konnichiwa')?></th><th><?php _e('Price', 'konnichiwa')?></th><th><?php _e('Duration', 'konnichiwa')?></th>
+			<th><?php _e('Edit / delete', 'konnichiwa')?></th></tr>
+			<?php foreach($plans as $plan):
+				$class = ("alternate" == @$class) ? '' : 'alternate';?>
+				<tr class="<?php echo $class?>"><td><?php echo $plan->name?></td>
+				<td><input type="text" value="[konnichiwa-subscribe <?php echo $plan->id?>]" readonly="true" onclick="this.select()"></td>
+				<td><?php echo KONN_CURRENCY.' '.$plan->price?></td>
+				<td><?php echo $plan->duration.' '.$plan->duration_unit?></td>
+				<td><a href="admin.php?page=konnichiwa_plans&action=edit&id=<?php echo $plan->id?>"><?php _e('Edit', 'konnichiwa')?></a>
+				| <a href="#" onclick="konnichiwaConfirmDelete(<?php echo $plan->id?>);return false;"><?php _e('Delete', 'konnichiwa')?></a></td></tr>
+			<?php endforeach;?>
+		</table>
+	<?php endif;?>
+	
+	<p><?php _e('The plan shortcode is used to generate a subscribe button. The button will automatically handle the user subscription and redirect them to the payment page accordingly to your payment settings.', 'konnichiwa');?></p>
+	
+	<p><?php _e('It is recommended to design your own page that will list the plans with their features etc.<br> However there are basic shortcodes that you can use to automatically generate a table with all the available plans:', 'konnichiwa');?> <input type="text" value="[konnichiwa-plans vertical]" readonly="true" onclick="this.select();" size="25"> <?php _e('- generates list of the plans with their feautures ordered in columns, while', 'konnichiwa');?> <br> <input type="text" value="[konnichiwa-plans horizontal]" readonly="true" onclick="this.select();" size="25"> <?php _e('generates a horizontal table with plans. Both codes auto-generate the "Subscribe" buttons.', 'konnichiwa');?> </p>
+	
+	<p><?php _e('(Stay tuned for a lot more flexible options in the upcoming Konnichiwa releases.)', 'konnichiwa')?></p>
+</div>
+
+<script type="text/javascript" >
+function konnichiwaConfirmDelete(id) {
+	if(confirm("<?php _e('Are you sure?', 'konnichiwa')?>")) {
+		window.location = 'admin.php?page=konnichiwa_plans&del=1&id=' + id;
+	}
+}
+</script>
