@@ -146,6 +146,7 @@ class Konnichiwa {
 		// shortcodes
 		add_shortcode('konnichiwa-plans', array('KonnichiwaShortcodes', 'plans'));
 		add_shortcode('konnichiwa-subscribe', array('KonnichiwaShortcodes', 'subscribe'));
+		add_shortcode('konnichiwa-protect', array('KonnichiwaShortcodes', 'protect'));
 		
 		// actions
 		add_action('template_redirect', array('KonnichiwaSubs', 'template_redirect'));

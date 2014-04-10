@@ -48,4 +48,32 @@ class KonnichiwaShortcodes {
 		$content = do_shortcode($content);
 		return $content;
 	}
+	
+	// protects a piece of content
+	static function protect($atts, $content = null) {
+		global $wpdb, $user_ID;
+		
+		if(!is_user_logged_in()) return __('This content is available only for registered users.', 'konnichiwa');
+		if(strstr(@$atts['plans'], ",")) $plans = explode(",", @$atts['plans']);
+		else $plans = array($atts['plans']);
+		
+		if(empty($plans)) return __('Protected content', 'konnichiwa');
+		
+		// get active user plans
+		$subs = $wpdb->get_results($wpdb->prepare("SELECT plan_id FROM ".KONN_SUBS."
+					WHERE user_id=%d AND expires >= CURDATE() AND status=1", $user_ID));
+					
+		foreach($subs as $sub) {
+			// if even one is found we're all ok to return the content
+			if(in_array($sub->plan_id, $plans)) return $content;
+		}			
+		
+		// no plans found? return restricted text
+		$plans = $wpdb->get_results("SELECT name FROM ".KONN_PLANS." WHERE id IN (".implode(",", $plans).")");
+		$plan_names = array();
+		foreach($plans as $plan) $plan_names[] = $plan->name;
+		
+		return sprintf(__('This content is available only for users with the following subscription plans: <b>%s</b>', 'konnichiwa'), 
+			implode(", ", $plan_names)); 
+	} // end protect()
 }

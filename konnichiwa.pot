@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Konnichiwa! package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Konnichiwa! 0.6.4\n"
+"Project-Id-Version: Konnichiwa! 0.7\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/konnichiwa\n"
-"POT-Creation-Date: 2014-01-21 16:38:39+00:00\n"
+"POT-Creation-Date: 2014-04-10 16:18:18+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,16 +12,18 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: controllers/contents.php:67
+#: controllers/contents.php:60
 msgid "Content access"
 msgstr ""
 
-#: controllers/contents.php:112
+#: controllers/contents.php:105 controllers/shortcodes.php:56
 msgid "This content is available only for registered users."
 msgstr ""
 
-#: controllers/contents.php:134
-msgid "This content is available only for users with the following subscription plans: <b>%s</b>"
+#: controllers/contents.php:127 controllers/shortcodes.php:76
+msgid ""
+"This content is available only for users with the following subscription "
+"plans: <b>%s</b>"
 msgstr ""
 
 #: controllers/shortcodes.php:19
@@ -32,10 +34,16 @@ msgstr ""
 msgid "Subscription expired!"
 msgstr ""
 
+#: controllers/shortcodes.php:60
+msgid "Protected content"
+msgstr ""
+
 #: controllers/subs.php:57
 msgid "User not found."
 msgstr ""
 
+#. #-#-#-#-#  konnichiwa.pot (Konnichiwa! 0.7)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
 #: models/basic.php:86
 msgid "Konnichiwa!"
 msgstr ""
@@ -105,7 +113,11 @@ msgid "Manage Content Restrictions"
 msgstr ""
 
 #: views/contents.html.php:4
-msgid "On this page you can restrict the access to various types of content and elaborate futher by category. You can apply the same restrictions to individual posts and pages from the respective add/edit post/page screens. By default all content is accessible to everyone."
+msgid ""
+"On this page you can restrict the access to various types of content and "
+"elaborate futher by category. You can apply the same restrictions to "
+"individual posts and pages from the respective add/edit post/page screens. "
+"By default all content is accessible to everyone."
 msgstr ""
 
 #: views/contents.html.php:8
@@ -125,7 +137,10 @@ msgid "Category: %s"
 msgstr ""
 
 #: views/contents.html.php:35
-msgid "Note: access settings configured on individual content pages will not be overwritten and always have priority over the global settings configured on this page."
+msgid ""
+"Note: access settings configured on individual content pages will not be "
+"overwritten and always have priority over the global settings configured on "
+"this page."
 msgstr ""
 
 #: views/contents.html.php:37
@@ -160,11 +175,11 @@ msgstr ""
 msgid "Inactive"
 msgstr ""
 
-#: views/edit-subscription.html.php:27 views/plans.html.php:17
+#: views/edit-subscription.html.php:27 views/plans.html.php:19
 msgid "Delete"
 msgstr ""
 
-#: views/edit-subscription.html.php:37 views/plans.html.php:31
+#: views/edit-subscription.html.php:37 views/plans.html.php:43
 msgid "Are you sure?"
 msgstr ""
 
@@ -173,7 +188,9 @@ msgid "Konnichiwa! - Create Powerful Membership Site In Minutes"
 msgstr ""
 
 #: views/help.html.php:4
-msgid "Konnichiwa! is one of the easiest to start with membership plugins. Check our <a href=\"%s\" target=\"_blank\">quick getting started guide</a>."
+msgid ""
+"Konnichiwa! is one of the easiest to start with membership plugins. Check "
+"our <a href=\"%s\" target=\"_blank\">quick getting started guide</a>."
 msgstr ""
 
 #: views/help.html.php:6
@@ -213,7 +230,9 @@ msgid "Payment currency:"
 msgstr ""
 
 #: views/options.html.php:16
-msgid "Here you can specify payment methods that you will accept to give access to content."
+msgid ""
+"Here you can specify payment methods that you will accept to give access to "
+"content."
 msgstr ""
 
 #: views/options.html.php:18
@@ -241,11 +260,16 @@ msgid "Accept other payment methods"
 msgstr ""
 
 #: views/options.html.php:32
-msgid "This option lets you paste your own button HTML code or other manual instructions, for example bank wire. These payments will have to be processed manually unless you can build your own script to verify them."
+msgid ""
+"This option lets you paste your own button HTML code or other manual "
+"instructions, for example bank wire. These payments will have to be "
+"processed manually unless you can build your own script to verify them."
 msgstr ""
 
 #: views/options.html.php:35
-msgid "Enter text or HTML code for payment button(s). You can use the following variables: {{plan-id}}, {{user-id}}, {{amount}}."
+msgid ""
+"Enter text or HTML code for payment button(s). You can use the following "
+"variables: {{plan-id}}, {{user-id}}, {{amount}}."
 msgstr ""
 
 #: views/options.html.php:39
@@ -265,11 +289,11 @@ msgid "Optional description"
 msgstr ""
 
 #: views/plan.html.php:7 views/plans-table-horizontal.html.php:2
-#: views/plans.html.php:8
+#: views/plans.html.php:9
 msgid "Price"
 msgstr ""
 
-#: views/plan.html.php:8 views/plans.html.php:8
+#: views/plan.html.php:8 views/plans.html.php:9
 msgid "Duration"
 msgstr ""
 
@@ -318,36 +342,83 @@ msgid "Click here to create a new plan"
 msgstr ""
 
 #: views/plans.html.php:8
-msgid "Shortcode"
+msgid "Subscribe Shortcode"
 msgstr ""
 
 #: views/plans.html.php:9
+msgid "Protect Shortcode"
+msgstr ""
+
+#: views/plans.html.php:10
 msgid "Edit / delete"
 msgstr ""
 
-#: views/plans.html.php:16 views/subscriptions.html.php:18
+#: views/plans.html.php:18 views/subscriptions.html.php:18
 #: views/subscriptions.html.php:25
 msgid "Edit"
 msgstr ""
 
-#: views/plans.html.php:22
-msgid "The plan shortcode is used to generate a subscribe button. The button will automatically handle the user subscription and redirect them to the payment page accordingly to your payment settings."
-msgstr ""
-
 #: views/plans.html.php:24
-msgid "It is recommended to design your own page that will list the plans with their features etc.<br> However there are basic shortcodes that you can use to automatically generate a table with all the available plans:"
+msgid "General Shortcodes"
 msgstr ""
 
-#: views/plans.html.php:24
-msgid "- generates list of the plans with their feautures ordered in columns, while"
+#: views/plans.html.php:25
+msgid ""
+"The plan shortcode is used to generate a subscribe button. The button will "
+"automatically handle the user subscription and redirect them to the payment "
+"page accordingly to your payment settings."
 msgstr ""
 
-#: views/plans.html.php:24
-msgid "generates a horizontal table with plans. Both codes auto-generate the \"Subscribe\" buttons."
+#: views/plans.html.php:27
+msgid ""
+"It is recommended to design your own page that will list the plans with "
+"their features etc.<br> However there are basic shortcodes that you can use "
+"to automatically generate a table with all the available plans:"
 msgstr ""
 
-#: views/plans.html.php:26
-msgid "(Stay tuned for a lot more flexible options in the upcoming Konnichiwa releases.)"
+#: views/plans.html.php:27
+msgid ""
+"- generates list of the plans with their feautures ordered in columns, while"
+msgstr ""
+
+#: views/plans.html.php:27
+msgid ""
+"generates a horizontal table with plans. Both codes auto-generate the "
+"\"Subscribe\" buttons."
+msgstr ""
+
+#: views/plans.html.php:29
+msgid "Protect Shortcodes"
+msgstr ""
+
+#: views/plans.html.php:31
+msgid ""
+"This shortcode can be used to protect a piece of content inside a post, page "
+"or custom content that is public accessible. Here is how to use it:"
+msgstr ""
+
+#: views/plans.html.php:33
+msgid "Start with"
+msgstr ""
+
+#: views/plans.html.php:33
+msgid ""
+"(where x is the required subscription plan ID which you can get from the "
+"above table), and end with"
+msgstr ""
+
+#: views/plans.html.php:34
+msgid "Put your content between both shortcodes."
+msgstr ""
+
+#: views/plans.html.php:35
+msgid ""
+"You can also allow multiple subscription plans by separating their plan IDs "
+"with comma (NO SPACES!). Example:"
+msgstr ""
+
+#: views/plans.html.php:36
+msgid "Your protected content here"
 msgstr ""
 
 #: views/subscribe-form.html.php:3

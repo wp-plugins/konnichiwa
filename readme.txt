@@ -2,7 +2,7 @@
 Contributors: prasunsen
 Tags: membership, content management, subscriptions, learning, community
 Requires at least: 3.3
-Tested up to: 3.8.1
+Tested up to: 3.8.2
 Stable tag: trunk
 License: GPL2
 
@@ -39,6 +39,7 @@ See what Konnichiwa! does:
 - Supports Paypal and Stripe payments
 - Manage subscriptions and manually subscribe users
 - Auto-publish a sales page with all membership plans, or design the plans yourself and use the shortcodes only for the subscribe buttons
+- Protect a piece of content within a post or page (or custom post type)
 - Integrates perfectly with Namaste! LMS, Daskal, and other popular plugins
 
 After activating the plugin please check the Help page for a quick getting started guide.
@@ -63,6 +64,9 @@ None yet, please ask in the forum
 5. Each post, page or other content type can have its individual access restrictions.
 
 == Changelog ==
+
+= Version 0.7 =
+- A new shortcode allows you to protect a piece of content within a post or page (or custom post type)
 
 = Version 0.6.4 =
 
