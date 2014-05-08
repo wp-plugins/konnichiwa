@@ -34,8 +34,9 @@ class KonnichiwaContent {
 	// retrieves the information about the access to the current content
 	function get_access($post, $inherit_access = null) {
 		global $wpdb;
+		if(empty($post)) return true;
 		
-		// when not passed, get it
+		// when not passed, get it		
 		if(!$inherit_access) $inherit_access = get_post_meta($post->ID, 'konnichiwa_inherit_access', true);
 		
 		// when meta is available, it has priority
