@@ -13,7 +13,7 @@
          <?php endforeach; ?>
 			</select></p>
 			
-			<p><?php _e('Here you can specify payment methods that you will accept to give access to content.', 'namaste')?></p>
+			<p><?php _e('Here you can specify payment methods that you will accept to give access to content.', 'konnichiwa')?></p>
 			
 			<p><input type="checkbox" name="accept_paypal" value="1" <?php if($accept_paypal) echo 'checked'?> onclick="this.checked?jQuery('#paypalDiv').show():jQuery('#paypalDiv').hide()"> <?php _e('Accept PayPal', 'konnichiwa')?></p>
 			
