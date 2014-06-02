@@ -2,7 +2,7 @@
 Contributors: prasunsen
 Tags: membership, content management, subscriptions, learning, community
 Requires at least: 3.3
-Tested up to: 3.8.2
+Tested up to: 3.9.1
 Stable tag: trunk
 License: GPL2
 
@@ -26,7 +26,7 @@ Konnichiwa! is a super quick-start membership plugin.
 == Description ==
 
 Create Powerful Membership Site In Minutes! 
-(From the creators of Namaste! LMS.)
+(From the creators of Namaste! LMS)
 
 See what Konnichiwa! does:
 
@@ -35,6 +35,7 @@ See what Konnichiwa! does:
 - Manage unlimited number of subscription plans
 - Protect content by type or by category, all from one page
 - Protect each individual piece of content individually from the add/edit page in your administration
+- Protect parts of post / page (or any other content) by placing it inside Konnichiwa shortcode
 - Supports custom content types
 - Supports Paypal and Stripe payments
 - Manage subscriptions and manually subscribe users
@@ -42,7 +43,7 @@ See what Konnichiwa! does:
 - Protect a piece of content within a post or page (or custom post type)
 - Integrates perfectly with Namaste! LMS, Daskal, and other popular plugins
 
-After activating the plugin please check the Help page for a quick getting started guide.
+**After activating the plugin please check the Help page for a quick getting started guide.**
 
 == Installation ==
 
@@ -64,6 +65,9 @@ None yet, please ask in the forum
 5. Each post, page or other content type can have its individual access restrictions.
 
 == Changelog ==
+
+= Version 0.7.1 = 
+1. Made the protect shortcode execute shortcodes from other plugins. This way you can protect any dynamic conent like quizzes etc.
 
 = Version 0.7 =
 - A new shortcode allows you to protect a piece of content within a post or page (or custom post type)

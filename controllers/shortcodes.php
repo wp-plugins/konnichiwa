@@ -65,7 +65,7 @@ class KonnichiwaShortcodes {
 					
 		foreach($subs as $sub) {
 			// if even one is found we're all ok to return the content
-			if(in_array($sub->plan_id, $plans)) return $content;
+			if(in_array($sub->plan_id, $plans)) return do_shortcode($content);
 		}			
 		
 		// no plans found? return restricted text
