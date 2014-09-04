@@ -4,7 +4,7 @@ Plugin Name: Konnichiwa!
 Plugin URI: http://namaste-lms.org/konnichiwa.php
 Description: Flexible membership plugin. Start selling access to premium content in your site in minutes.
 Author: Kiboko Labs
-Version: 0.7.1
+Version: 0.7.3
 Author URI: http://calendarscripts.info/
 License: GPLv2 or later
 */
@@ -23,6 +23,7 @@ require_once(KONN_PATH.'/controllers/plans.php');
 require_once(KONN_PATH.'/controllers/contents.php');
 require_once(KONN_PATH.'/controllers/subs.php');
 require_once(KONN_PATH.'/controllers/shortcodes.php');
+include_once(KONN_PATH.'/controllers/files.php');
 require_once(KONN_PATH.'/helpers/htmlhelper.php');
 
 add_action('init', array("Konnichiwa", "init"));

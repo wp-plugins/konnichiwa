@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Konnichiwa! package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Konnichiwa! 0.7\n"
+"Project-Id-Version: Konnichiwa! 0.7.3\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/konnichiwa\n"
-"POT-Creation-Date: 2014-05-14 15:11:15+00:00\n"
+"POT-Creation-Date: 2014-09-04 16:26:42+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,6 +26,32 @@ msgid ""
 "plans: <b>%s</b>"
 msgstr ""
 
+#: controllers/files.php:75
+msgid "Registered users"
+msgstr ""
+
+#: controllers/files.php:81
+msgid "Subscription plans: %s"
+msgstr ""
+
+#: controllers/files.php:97
+msgid "Only logged in users can download uploaded files."
+msgstr ""
+
+#: controllers/files.php:103
+msgid "This file has been deleted."
+msgstr ""
+
+#: controllers/files.php:109
+msgid "You have no access to this file"
+msgstr ""
+
+#: controllers/files.php:127
+msgid ""
+"This file is available only for users with the following subscription plans: "
+"<b>%s</b>"
+msgstr ""
+
 #: controllers/shortcodes.php:19
 msgid "Currently subscribed!"
 msgstr ""
@@ -42,29 +68,33 @@ msgstr ""
 msgid "User not found."
 msgstr ""
 
-#. #-#-#-#-#  konnichiwa.pot (Konnichiwa! 0.7)  #-#-#-#-#
+#. #-#-#-#-#  konnichiwa.pot (Konnichiwa! 0.7.3)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
-#: models/basic.php:86
+#: models/basic.php:103
 msgid "Konnichiwa!"
 msgstr ""
 
-#: models/basic.php:86
+#: models/basic.php:103
 msgid "Konnichiwa"
 msgstr ""
 
-#: models/basic.php:89
+#: models/basic.php:106
 msgid "Subscription Plans"
 msgstr ""
 
-#: models/basic.php:91
+#: models/basic.php:108
 msgid "Content Access"
 msgstr ""
 
-#: models/basic.php:93
+#: models/basic.php:110
+msgid "Protected Files"
+msgstr ""
+
+#: models/basic.php:112
 msgid "Subscriptions"
 msgstr ""
 
-#: models/basic.php:95
+#: models/basic.php:114
 msgid "Help"
 msgstr ""
 
@@ -175,12 +205,101 @@ msgstr ""
 msgid "Inactive"
 msgstr ""
 
-#: views/edit-subscription.html.php:27 views/plans.html.php:19
+#: views/edit-subscription.html.php:27 views/files.html.php:18
+#: views/plans.html.php:19
 msgid "Delete"
 msgstr ""
 
-#: views/edit-subscription.html.php:37 views/plans.html.php:43
+#: views/edit-subscription.html.php:37 views/files.html.php:28
+#: views/plans.html.php:43
 msgid "Are you sure?"
+msgstr ""
+
+#: views/file.html.php:2
+msgid "Add / Edit Protected File"
+msgstr ""
+
+#: views/file.html.php:4
+msgid "Back to all protected files"
+msgstr ""
+
+#: views/file.html.php:8
+msgid "Upload file:"
+msgstr ""
+
+#: views/file.html.php:11
+msgid "Currently uploaded file: <a href=\"%s\">%s</a> (%d KB %s)"
+msgstr ""
+
+#: views/file.html.php:14
+msgid "Select protection type:"
+msgstr ""
+
+#: views/file.html.php:16
+msgid "All registered users"
+msgstr ""
+
+#: views/file.html.php:17
+msgid "Users subscribed to the selected plans"
+msgstr ""
+
+#: views/file.html.php:21
+msgid "Select subscription plans"
+msgstr ""
+
+#: views/file.html.php:28
+msgid "Save Protected File"
+msgstr ""
+
+#: views/file.html.php:38
+msgid "Please upload file"
+msgstr ""
+
+#: views/files.html.php:2
+msgid "Manage Protected Files"
+msgstr ""
+
+#: views/files.html.php:4
+msgid "Upload new protected file"
+msgstr ""
+
+#: views/files.html.php:7
+msgid ""
+"Copy the download URL for each file and create links to it inside your "
+"contents."
+msgstr ""
+
+#: views/files.html.php:9
+msgid "File name"
+msgstr ""
+
+#: views/files.html.php:9
+msgid "File type"
+msgstr ""
+
+#: views/files.html.php:10
+msgid "File size (KB)"
+msgstr ""
+
+#: views/files.html.php:10
+msgid "Restriction"
+msgstr ""
+
+#: views/files.html.php:11
+msgid "Downloads"
+msgstr ""
+
+#: views/files.html.php:11 views/plans.html.php:10
+msgid "Edit / delete"
+msgstr ""
+
+#: views/files.html.php:17 views/plans.html.php:18
+#: views/subscriptions.html.php:18 views/subscriptions.html.php:25
+msgid "Edit"
+msgstr ""
+
+#: views/files.html.php:20
+msgid "Download URL:"
 msgstr ""
 
 #: views/help.html.php:2
@@ -347,15 +466,6 @@ msgstr ""
 
 #: views/plans.html.php:9
 msgid "Protect Shortcode"
-msgstr ""
-
-#: views/plans.html.php:10
-msgid "Edit / delete"
-msgstr ""
-
-#: views/plans.html.php:18 views/subscriptions.html.php:18
-#: views/subscriptions.html.php:25
-msgid "Edit"
 msgstr ""
 
 #: views/plans.html.php:24

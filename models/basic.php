@@ -1,11 +1,11 @@
 <?php
 // main model containing general config and UI functions
 class Konnichiwa {
-   static function install() {
+   static function install($update = false) {
    	global $wpdb;	
    	$wpdb -> show_errors();
    	
-   	self::init();
+   	if(!$update) self::init();
 	  
 	   // subscription plans
    	if($wpdb->get_var("SHOW TABLES LIKE '".KONN_PLANS."'") != KONN_PLANS) {        
@@ -61,6 +61,22 @@ class Konnichiwa {
 			$wpdb->query($sql);
 	  } 
 	  
+	  // protected files
+     if($wpdb->get_var("SHOW TABLES LIKE '".KONN_FILES."'") != KONN_FILES) {        
+			$sql = "CREATE TABLE `" . KONN_FILES . "` (
+				  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+				  `filename` VARCHAR(255) NOT NULL DEFAULT '',
+				  `filetype` VARCHAR(100) NOT NULL DEFAULT '', /* file extension */
+				  `filesize` INT UNSIGNED NOT NULL DEFAULT 0, /* size in KB */		  
+				  `protection_type` VARCHAR(100) NOT NULL DEFAULT 'none', /* none, registered, plans (list of subscription plans) */
+				  `filecontents` LONGBLOB,
+				  `downloads` INT UNSIGNED NOT NULL DEFAULT 0
+				) DEFAULT CHARSET=utf8;";
+			
+			$wpdb->query($sql);
+	  } 
+	  
+	  
 	  // payments made
      if($wpdb->get_var("SHOW TABLES LIKE '".KONN_PAYMENTS."'") != KONN_PAYMENTS) {        
 			$sql = "CREATE TABLE `" . KONN_PAYMENTS . "` (
@@ -78,6 +94,7 @@ class Konnichiwa {
 			$wpdb->query($sql);
 	  } 
 	  
+	  update_option('konnichiwa_version', 0.71);
 	  // exit;
    }
    
@@ -90,6 +107,8 @@ class Konnichiwa {
    		'konnichiwa_plans', array('KonnichiwaPlans','manage'));	
    	add_submenu_page('konnichiwa', __('Content Access', 'konnichiwa'), __('Content Access', 'konnichiwa'), 'manage_options', 
    		'konnichiwa_content', array('KonnichiwaContents','manage'));
+   	add_submenu_page('konnichiwa', __('Protected Files', 'konnichiwa'), __('Protected Files', 'konnichiwa'), 'manage_options', 
+   		'konnichiwa_files', array('KonnichiwaFiles','manage'));
    	add_submenu_page('konnichiwa', __('Subscriptions', 'konnichiwa'), __('Subscriptions', 'konnichiwa'), 'manage_options', 
    		'konnichiwa_subs', array('KonnichiwaSubs','manage'));	
    	add_submenu_page('konnichiwa', __('Help', 'konnichiwa'), __('Help', 'konnichiwa'), 'manage_options', 
@@ -133,6 +152,7 @@ class Konnichiwa {
 		define('KONN_USAGE', $wpdb->prefix.'konnichiwa_usage');
 		define('KONN_CONTENT', $wpdb->prefix.'konnichiwa_content');
 		define('KONN_PAYMENTS', $wpdb->prefix.'konnichiwa_payments');
+		define('KONN_FILES', $wpdb->prefix.'konnichiwa_files');
 		
 		define( 'KONN_VERSION', get_option('konnichiwa_version'));
 		$currency = get_option('konnichiwa_currency');
@@ -150,10 +170,15 @@ class Konnichiwa {
 		
 		// actions
 		add_action('template_redirect', array('KonnichiwaSubs', 'template_redirect'));
+		add_action('template_redirect', array('KonnichiwaFiles', 'download'));
 		
 		// Paypal IPN
 		add_filter('query_vars', array(__CLASS__, "query_vars"));
 		add_action('parse_request', array("KonnichiwaPayment", "parse_request"));
+		
+		// run activate
+		$version = get_option('konnichiwa_version');
+		if(empty($version) or $version < 0.71) self :: install(true);
 	}
 	
 	// handle Konnichiwa vars in the request
