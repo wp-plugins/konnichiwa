@@ -137,6 +137,11 @@ class KonnichiwaSubs {
 				 
 				Stripe::setApiKey($stripe['secret_key']);
 			}		
+			
+			// replace variables in other payment methods
+			$other_payment_methods = str_replace('{{plan-id}}', $plan->id, $other_payment_methods);
+			$other_payment_methods = str_replace('{{user-id}}', $user_ID, $other_payment_methods);
+			$other_payment_methods = str_replace('{{amount}}', number_format($plan->price,2,".",""), $other_payment_methods);
 		}		
 		
 		// now depending on the payment method(s) we have to display the payment / subscription success page
@@ -150,8 +155,7 @@ class KonnichiwaSubs {
 			KonnichiwaPayment :: Stripe();
 		}		
 		
-		if(!empty($_POST['konnichiwa_subscribe'])) {
-			
+		if(!empty($_POST['konnichiwa_subscribe'])) {			
 			// if user is not logged in we need to send them to login first
 			if(!is_user_logged_in()) {
 				konnichiwa_redirect(site_url("wp-login.php?redirect_to=".urlencode(get_permalink( $post->ID ))));

@@ -66,9 +66,10 @@ None yet, please ask in the forum
 
 == Changelog ==
 
-= Version 0.7.3 = 
+= Version 0.7.4 = 
 1. Made the protect shortcode execute shortcodes from other plugins. This way you can protect any dynamic conent like quizzes etc.
 2. "Protected files" menu lets you upload files protected by your subscription plans.
+3. Fixed problem with replacing variables for "other payment methods"
 
 = Version 0.7 =
 - A new shortcode allows you to protect a piece of content within a post or page (or custom post type)
