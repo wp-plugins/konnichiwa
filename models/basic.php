@@ -193,6 +193,7 @@ class Konnichiwa {
 		if(!empty($_POST['konnichiwa_payment_options'])) {
 			update_option('konnichiwa_accept_other_payment_methods', $_POST['accept_other_payment_methods']);
 			update_option('konnichiwa_other_payment_methods', $_POST['other_payment_methods']);
+			if(empty($_POST['currency'])) $_POST['currency'] = $_POST['custom_currency'];
 			update_option('konnichiwa_currency', $_POST['currency']);
 			update_option('konnichiwa_accept_paypal', @$_POST['accept_paypal']);
 			update_option('konnichiwa_paypal_id', $_POST['paypal_id']);
@@ -209,8 +210,9 @@ class Konnichiwa {
 		$currency = get_option('konnichiwa_currency');
 		$currencies=array('USD'=>'$', "EUR"=>"&euro;", "GBP"=>"&pound;", "JPY"=>"&yen;", "AUD"=>"AUD",
 	   "CAD"=>"CAD", "CHF"=>"CHF", "CZK"=>"CZK", "DKK"=>"DKK", "HKD"=>"HKD", "HUF"=>"HUF",
-	   "ILS"=>"ILS", "MXN"=>"MXN", "NOK"=>"NOK", "NZD"=>"NZD", "PLN"=>"PLN", "SEK"=>"SEK",
-	   "SGD"=>"SGD");				
+	   "ILS"=>"ILS", "INR"=>"INR", "MXN"=>"MXN", "NOK"=>"NOK", "NZD"=>"NZD", "PLN"=>"PLN", "SEK"=>"SEK",
+	   "SGD"=>"SGD", "ZAR"=>"ZAR");		
+	   $currency_keys = array_keys($currencies);  			
 			
 		require(KONN_PATH."/views/options.html.php");
 	}	

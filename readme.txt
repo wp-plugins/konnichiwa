@@ -2,7 +2,7 @@
 Contributors: prasunsen
 Tags: membership, content management, subscriptions, learning, community
 Requires at least: 3.3
-Tested up to: 4.0
+Tested up to: 4.1.1
 Stable tag: trunk
 License: GPL2
 
@@ -66,10 +66,11 @@ None yet, please ask in the forum
 
 == Changelog ==
 
-= Version 0.7.4 = 
+= Version 0.7.5 = 
 1. Made the protect shortcode execute shortcodes from other plugins. This way you can protect any dynamic conent like quizzes etc.
 2. "Protected files" menu lets you upload files protected by your subscription plans.
 3. Fixed problem with replacing variables for "other payment methods"
+4. Added custom currency option
 
 = Version 0.7 =
 - A new shortcode allows you to protect a piece of content within a post or page (or custom post type)
