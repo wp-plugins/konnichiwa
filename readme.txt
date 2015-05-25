@@ -2,7 +2,7 @@
 Contributors: prasunsen
 Tags: membership, content management, subscriptions, learning, community
 Requires at least: 3.3
-Tested up to: 4.1.1
+Tested up to: 4.2
 Stable tag: trunk
 License: GPL2
 

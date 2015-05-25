@@ -22,7 +22,7 @@
 					<td><?php echo date($dateformat, strtotime($sub->expires))?></td>
 					<td><?php echo $sub->status ? __('Active', 'konnichiwa') : __('Pending', 'konnichiwa')?></td>
 					<td><?php echo KONN_CURRENCY.' '.$sub->amt_paid?></td>
-					<td><a href="admin.php?page=konnichiwa_subs&action=edit&id=<?php echo $sub->id?>&plan_id=<?php echo $plan->id?>&ob=<?php echo $ob?>&dir=<?php echo $dir?>&offset=<?php echo $offset?>"><?php _e('Edit', 'konnichiwa')?></a></td></tr>
+					<td><a href="admin.php?page=konnichiwa_subs&action=edit&id=<?php echo $sub->id?>&plan_id=<?php echo $_GET['plan_id']?>&ob=<?php echo $ob?>&dir=<?php echo $dir?>&offset=<?php echo $offset?>"><?php _e('Edit', 'konnichiwa')?></a></td></tr>
 				<?php endforeach;?>
 			</table>
 		<?php else:?> <p><?php _e('There are no subscriptions in this plan yet.', 'konnichiwa')?></p>		
