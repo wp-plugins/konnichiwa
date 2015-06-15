@@ -9,7 +9,7 @@
 		<div class="konnichiwa-wrap konnichiwa-form wp-admin">
 			<p><label><?php _e('User:', 'konnichiwa')?></label> <b><?php echo $user->user_nicename?></b></p>
 			<p><label><?php _e('Date subscribed:', 'konnichiwa')?></label> <b><?php echo date($dateformat, strtotime($sub->date));?></b></p>
-			<p><label><?php _e('Expiration date:', 'konnichiwa')?></label> <?php echo KonnichiwaQuickDDDate('exp', $sub->date, null, null, 2014);?></p>
+			<p><label><?php _e('Expiration date:', 'konnichiwa')?></label> <?php echo KonnichiwaQuickDDDate('exp', $sub->expires, null, null, 2014);?></p>
 			<p><label><?php _e('Subscription plan:', 'konnichiwa')?></label> <select name="plan_id">
 				<?php foreach($plans as $plan):?>
 					<option value="<?php echo $plan->id?>" <?php if($plan->id == $sub->plan_id) echo 'selected'?>><?php echo $plan->name?></option>
